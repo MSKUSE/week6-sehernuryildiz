@@ -1,10 +1,10 @@
-public class Circle {
+public class Circle extends Shape{
 
     private Point center;
     private int radius;
 
     public Circle(Point center, int radius) {
-        this.center = center;
+        super(center);
         this.radius = radius;
     }
 
@@ -20,6 +20,14 @@ public class Circle {
         return radius;
     }
 
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "center=" + center +
+                ", radius=" + radius +
+                '}';
+    }
+
     public void setRadius(int radius) {
         if (radius < 0){
             this.radius = 0;
@@ -28,5 +36,7 @@ public class Circle {
             this.radius = radius;
 
         }
+
+
     }
 }

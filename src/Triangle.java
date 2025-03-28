@@ -1,4 +1,4 @@
-public class Rectangle extends Shape {
+public class Triangle {
 
     private Point topLeft;
     private int sideA , sideB;
@@ -7,19 +7,9 @@ public class Rectangle extends Shape {
     public int counterforobject = 0;
 
 
-    public Rectangle(Point topLeft, int sideA, int sideB) {
-        super(topLeft);
-        setSideA(sideA);
-        setSideB(sideB);
-        counter ++;
-        counterforobject ++;
-
-    }
-
-    public Rectangle(Point topLeft, int sideA) {
+    public Triangle(Point topLeft, int sideA) {
         this.topLeft = topLeft;
         setSideA(sideA);
-        setSideB(sideA);
         counter ++;
         counterforobject ++;
     }
@@ -45,31 +35,18 @@ public class Rectangle extends Shape {
         }
     }
 
-    public int getSideB() {
-        return sideB;
-    }
-
-    public void setSideB(int sideB) {
-        if (sideB < 0) {
-            throw new IllegalArgumentException("Side B can't be negative!!");
-
-        } else {
-            this.sideB = sideB;
-        }
-    }
     public int perimeter(){
-        return 2 * (sideA + sideB);
+        3 * sideA;
     }
     public int area(){
-        return sideA * sideB;
+        return (sideA * topLeft) / 2;
     }
 
     @Override
     public String toString() {
-        return "Rectangle{" +
+        return "Triangle{" +
                 "topLeft=" + topLeft +
                 ", sideA=" + sideA +
-                ", sideB=" + sideB +
                 '}';
     }
 }
